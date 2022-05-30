@@ -190,3 +190,14 @@ h1 {
 #current-btn {
   margin-top: 250px;
 }
+.credits {
+  background-color: #1253a3;
+}
+
+.credits__link {
+  text-align: center;
+  color: white;
+}
+.credits__link a {
+  color: #f04a3f;
+}
