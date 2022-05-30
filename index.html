@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>Weather Forecast</title>
+    <script
+      src="https://kit.fontawesome.com/2792b3ef82.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:wght@400;700&family=Architects+Daughter&family=Luckiest+Guy&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <section class="main">
+        <div class="container">
+          <div class="row">
+            <div class="col-4 offset-1 main__today">
+              <h3 class="main__city">
+                city: <span class="handwriting handwriting_city" id = "actual-city">Somewhere</span>
+              </h3>
+              <div class="main__day-time">
+                day: <span class="handwriting">Wednesday</span>, time:
+                <span class="handwriting">12</span>
+                <span class="handwriting">:</span>
+                <span class="handwriting">00</span>
+              </div>
+              <div class="cloud_big">
+                <h1>
+                  <span class="temp__numb" id="actual-temp">00</span>
+                  <span class="temp__units">°C </span>
+                  <span ><i  id = "actual-weather" class="fa-solid fa-sun"></i></span>
+                </h1>
+                <a href="#" id ="convert-temp">°F ?</a>
+              </div>
+              <div class="main__details">
+                humidity: <span class="handwriting" id="actual-humidity">00</span><span > %</span>, wind:
+                <span class="handwriting" id="actual-wind">00</span><span > km/h</span> 
+              </div>
+            </div>
+            <div class="col-5 offset-1 main__img" id = "actual-img">
+              <img
+                src="img/wind.jpg"
+                alt="windy"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="forecast">
+        <div class="container">
+          <div class="row">
+            <div class="col cloud cloud_small">
+              <div class="handwriting handwriting_small" id="second-day">Thursday</div>
+              <div class="forecast__weather">
+                <span class="temp temp__numb">9</span>
+                <span class="temp temp__units">°C</span>
+                <i class="fa-solid fa-cloud-moon"></i> /
+                <span class="temp temp__numb">15</span>
+                <span class="temp temp__units">°C</span>
+                <i class="fa-solid fa-cloud-bolt"></i>
+              </div>
+            </div>
+
+            <div class="col cloud cloud_small">
+              <div class="handwriting handwriting_small" id="third-day">Friday</div>
+              <div class="forecast__weather">
+                <span class="temp temp__numb">11</span>
+                <span class="temp temp__units">°C</span>
+                <i class="fa-solid fa-moon"></i> /
+                <span class="temp temp__numb">17</span>
+                <span class="temp temp__units">°C</span>
+                <i class="fa-solid fa-sun"></i>
+              </div>
+            </div>
+            <div class="col cloud cloud_small">
+              <div class="handwriting handwriting_small" id="fourth-day">Saturday</div>
+              <div class="forecast__weather">
+                <span class="temp temp__numb">10</span>
+                <span class="temp temp__units">°C</span>
+                <i class="fa-solid fa-cloud-moon-rain"></i></i> /
+                <span class="temp temp__numb">16</span>
+                <span class="temp temp__units">°C</span>
+                <i class="fa-solid fa-cloud-sun"></i>
+              </div>
+            </div>
+            <div class="col cloud cloud_small">
+              <div class="handwriting handwriting_small" id="fifth-day">Sunday</div>
+              <div class="forecast__weather">
+                <span class="temp temp__numb">12</span>
+                <span class="temp temp__units">°C</span>
+                <i class="fa-solid fa-moon"></i> /
+                <span class="temp temp__numb">18</span>
+                <span class="temp temp__units">°C</span>
+                <i class="fa-solid fa-sun"></i>
+              </div>
+            </div>
+            <div class="col cloud cloud_small">
+              <div class="handwriting handwriting_small" id="sixth-day">Monday</div>
+              <div class="forecast__weather">
+                <span class="temp temp__numb">7</span>
+                <span class="temp temp__units">°C</span>
+                <i class="fa-solid fa-cloud-moon-rain"></i> /
+                <span class="temp temp__numb">13</span>
+                <span class="temp temp__units">°C</span>
+                <i class="fa-solid fa-cloud-bolt"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="search">
+        <div class="container">
+          <div class="row">
+            <div class="col-5 offset-5">
+              <form action="" id ="search-form">
+                <input
+                  type="text"
+                  placeholder="Change city"
+                  id="search-input"
+                />
+                <input type="submit" value="Search" class="submit__btn" />
+              </form>
+            </div>
+            <div class="col-2">
+              <button id="current-btn">Current</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
+
